@@ -3,7 +3,7 @@ const routes = express.Router();
 
 const userController = require('./controllers/userController');
 
-
+// Rotas
 routes.get('/users', userController.list);
 routes.post('/users', userController.create);
 routes.get('/users/:id', userController.show);

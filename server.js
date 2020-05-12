@@ -5,7 +5,7 @@ app = express();
 app.use(express.json());
 app.use(cors())
 
-const url = 'mongodb+srv://usuario_admin:JrBiEWCWnRtl2iM2@cluster0-ljyuo.mongodb.net/test?retryWrites=true&w=majority'
+const url = // Url para conexão com MongoDB (Banco Excluído).
 
 mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true});
 
@@ -15,6 +15,7 @@ mongoose.connection.on('connected', () => {
 
 require('./src/models/user');
 
+// Rota
 app.use('/v1', require('./src/routes'));
 
 app.listen(3000);
