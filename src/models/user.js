@@ -1,8 +1,9 @@
 // Criando modelo de usuário para banco de dados 
 
 const mongoose = require('mongoose');
+const mongoosePaginate = require('mongoose-paginate');
 
-const user = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true
@@ -24,4 +25,6 @@ const user = new mongoose.Schema({
     }
 })
 
-mongoose.model('user', user);
+userSchema.plugin(mongoosePaginate);
+
+mongoose.model('User', userSchema);
