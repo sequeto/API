@@ -1,3 +1,5 @@
+// Criando modelo de usuário para banco de dados 
+
 const mongoose = require('mongoose');
 
 const user = new mongoose.Schema({
